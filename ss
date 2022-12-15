@@ -59,7 +59,7 @@ if typeof(getgenv().crosshairrs) == "RBXScriptConnection" then
     getgenv().crosshairrs:Disconnect()
 end
 local supported = false
-for i,v in next, {286090429,301549746,4292776423,292439477,299659045,4716045691,3233893879,2377868063,2555870920,4651779470,606849621,2916899287,443406476,1224212277,3527629287,388599755} do
+for i,v in next, {286090429,301549746,4292776423,292439477,299659045,4716045691,3233893879,2377868063,2555870920,11379383859,10139396488,4651779470,606849621,2916899287,443406476,1224212277,3527629287,388599755} do
     if game.PlaceId == v then
         supported = true
     end
@@ -164,6 +164,12 @@ getgenv().crosshairrs = RunService.RenderStepped:Connect(function()
                 player.PlayerGui.GUI.Crosshair.R.Visible = false
                 player.PlayerGui.GUI.Crosshair.U.Visible = false
                 player.PlayerGui.GUI.Crosshair.D.Visible = false
+            elseif game.PlaceId == 10139396488 or game.PlaceId == 11379383859 then
+                player.PlayerGui.GunGUI.Crosshair.Main.HL.Visible = false
+                player.PlayerGui.GunGUI.Crosshair.Main.HR.Visible = false
+                player.PlayerGui.GunGUI.Crosshair.Main.VD.Visible = false
+                player.PlayerGui.GunGUI.Crosshair.Main.VU.Visible = false
+                player.PlayerGui.GunGUI.Crosshair.Main.Center.Visible = false
             elseif game.PlaceId == 292439477 or game.PlaceId == 299659045 then -- Phantom Forces + test place
                 player.PlayerGui.MainGui.GameGui.CrossHud.Visible = false
             elseif game.PlaceId == 4716045691 then -- Polybattle
